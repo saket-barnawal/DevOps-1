@@ -1,0 +1,25 @@
+
+Docker Deploy on AWS EC2
+
+step 1 : Install docker
+
+step 2 : Create a docker file 
+       - vi Dockerfile
+         FROM python:3
+         RUN pip install django==3.2
+         
+         COPY . .
+  
+         RUN python manage.py migrate
+
+         CMD ["python","manage.py","runserver","0.0.0.0:8001"]
+
+step 3 : Create the image from docker file
+
+         sudo docker build . -t todo-app
+
+step 4 : port mapping of the app with docker host
+
+         sudo docker run -p 8001:8001 container id
+
+step 5 : finally its running ....
