@@ -1,0 +1,37 @@
+Deploying Project on AWS
+
+step 1: Setting up Project with Github
+
+        We need to first run the project in our local systems.So,let's create the particular environment for it.
+        -Open the specific folder where you want to store your project
+        -Clone the project from the GithHub : git clone (project url from GitHub)
+        -Make a specific environment to run the project so that it cannot affect your local system : virtualenv -p python3.7 env(name of environment)
+        -Activate the environment : sournce env/bin/activate
+        
+step 2: Follow the instructions from README.md file
+    
+step 3: Run the App in the AWS EC2 instance
+        -Create the EC2 instance
+        -login to EC2 instance through your terminal with SSH Client.
+        -make a directory called project, open project folder
+        -git clone project link
+        -cd django-todo 
+        -Sudo apt install python2-pip
+        -Sudo apt install python3-pip
+        -pip3 install django
+        -follow the readme.md file from the project folder.
+        
+ Manual Deploy on AWS EC2
+
+
+step 1 : port the local server to 0.0.0.0/0 so that it can be accesible from anywehre.
+
+step 2 : Edit the security, add the tcp inbound rules
+
+step 3 : open the security file, add the '*' to allowed_hosts
+
+step 4 : python3 manage.py runserver 0.0.0.0:8001
+
+step 5 : And the app is running after refreshing the page.
+
+        
