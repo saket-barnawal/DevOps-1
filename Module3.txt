@@ -1,0 +1,23 @@
+Jenkins CICD pipeline 
+
+step 1 : Set up an agent.
+
+step 2 : Create a node called todo-app
+
+step 3 : Create a job - select free style project
+
+step 4 : build steps - execute shell 
+
+         cd /home/ubuntu/projects/django-todo
+         
+         docker build . -t todo-dev
+ 
+         docker run  -d -p 8000:8000 todo-dev -->save it.
+
+step 5 : click on build now and running..
+
+step 6 : Here we did CD(continous Delivery)
+
+step 7 : Edit it in index html page and kill the running process and again built now the job and server is up , running.
+
+
